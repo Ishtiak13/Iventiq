@@ -1,0 +1,122 @@
+[
+    {
+      "id": "event001",
+      "name": "Tech Innovators Summit 2025",
+      "thumbnail": "https://i.ibb.co/ZYW3VTp/tech-event.jpg",
+      "category": "Technology",
+      "date": "2025-05-15",
+      "location": "BRACU Auditorium, Dhaka",
+      "entry_fee": 500,
+      "description": "The Tech Innovators Summit 2025 at BRAC University brings together industry pioneers, students, and tech enthusiasts to explore cutting-edge advancements in AI, cybersecurity, and blockchain. Featuring keynote speeches from global tech leaders, hands-on workshops, and networking sessions, this event fosters innovation and collaboration. Attendees will engage in panel discussions on sustainable tech solutions and emerging trends shaping the future. Open to all, it’s a platform for students to showcase projects and connect with professionals. Join us to inspire and be inspired by the next wave of technological breakthroughs at BRAC University."
+    },
+    {
+      "id": "event002",
+      "name": "Cultural Fest 2025",
+      "thumbnail": "https://i.ibb.co/3rZJq5W/cultural-fest.jpg",
+      "category": "Cultural",
+      "date": "2025-06-10",
+      "location": "BRACU Campus Grounds, Dhaka",
+      "entry_fee": 200,
+      "description": "BRAC University’s Cultural Fest 2025 celebrates diversity through vibrant performances, art exhibitions, and culinary stalls. Students from various departments will showcase traditional and modern dance, music, and drama, reflecting Bangladesh’s rich heritage. The event includes interactive workshops on calligraphy, pottery, and folk crafts, encouraging cultural exchange. Attendees can enjoy authentic Bangladeshi dishes and international cuisines prepared by student clubs. Open to the public, this fest fosters unity and creativity, offering a platform for students to express their talents. Join us for a colorful celebration of culture and community at BRACU."
+    },
+    {
+      "id": "event003",
+      "name": "Inter-University Coding Marathon 2025",
+      "thumbnail": "https://i.ibb.co/5vW8zXh/coding-marathon.jpg",
+      "category": "Technology",
+      "date": "2025-07-20",
+      "location": "BRACU Computer Lab, Dhaka",
+      "entry_fee": 300,
+      "description": "The Inter-University Coding Marathon 2025 at BRAC University is a thrilling competition for aspiring programmers. Teams from universities across Bangladesh will tackle complex algorithmic challenges in a timed contest. Organized by the BRACU Computer Science Club, the event promotes problem-solving and teamwork. Participants can attend pre-event workshops to sharpen their skills in Python, C++, and Java. Prizes include scholarships and internships with tech firms. Open to students, it’s a chance to network with industry mentors and showcase coding prowess. Join us for an exciting day of coding and innovation."
+    },
+    {
+      "id": "event004",
+      "name": "BRACU Sports Carnival 2025",
+      "thumbnail": "https://i.ibb.co/K7QdJ9k/sports-carnival.jpg",
+      "category": "Sports",
+      "date": "2025-08-05",
+      "location": "BRACU Sports Complex, Dhaka",
+      "entry_fee": 150,
+      "description": "BRAC University’s Sports Carnival 2025 is a dynamic event featuring inter-departmental competitions in cricket, football, basketball, and badminton. Open to students and alumni, it promotes fitness and camaraderie. The carnival includes fun games like tug-of-war and relay races, alongside professional matches. Spectators can enjoy food stalls and live music, creating a festive atmosphere. Organized by the BRACU Sports Club, the event encourages teamwork and school spirit. Winners receive trophies and cash prizes. Join us for a day of athletic excellence and community bonding at BRACU’s vibrant sports complex."
+    },
+    {
+      "id": "event005",
+      "name": "Education Symposium 2025",
+      "thumbnail": "https://i.ibb.co/2qX9t4P/education-symposium.jpg",
+      "category": "Education",
+      "date": "2025-09-12",
+      "location": "BRACU Conference Hall, Dhaka",
+      "entry_fee": 400,
+      "description": "The Education Symposium 2025 at BRAC University gathers educators, policymakers, and students to discuss innovative teaching methodologies and educational reforms. Keynote speakers from renowned institutions will address digital learning, inclusive education, and skill-based curricula. Interactive workshops will train participants in modern pedagogical tools. The event also features student-led presentations on educational challenges in Bangladesh. Open to academics and the public, it aims to shape the future of education. Attendees will network with experts and contribute to policy recommendations. Join us for insightful discussions and practical solutions at BRACU."
+    },
+    {
+      "id": "event006",
+      "name": "BRACU Startup Pitch 2025",
+      "thumbnail": "https://i.ibb.co/8rL2nQk/startup-pitch.jpg",
+      "category": "Technology",
+      "date": "2025-10-18",
+      "location": "BRACU Innovation Hub, Dhaka",
+      "entry_fee": 250,
+      "description": "BRAC University’s Startup Pitch 2025 invites student entrepreneurs to present their business ideas to a panel of investors and industry experts. Organized by the BRACU Entrepreneurship Club, the event fosters innovation and supports budding startups. Participants attend mentorship sessions on business planning and pitching techniques. Winning teams receive seed funding and incubation support. Open to all students, it’s a platform to transform ideas into reality. Spectators can explore an innovation expo showcasing student projects. Join us to witness the next big startup emerge from BRACU’s vibrant ecosystem."
+    },
+    {
+      "id": "event007",
+      "name": "Literary Festival 2025",
+      "thumbnail": "https://i.ibb.co/4pY6m3T/literary-fest.jpg",
+      "category": "Cultural",
+      "date": "2025-11-03",
+      "location": "BRACU Library Plaza, Dhaka",
+      "entry_fee": 200,
+      "description": "The Literary Festival 2025 at BRAC University celebrates the power of words through poetry readings, storytelling, and panel discussions with renowned authors. Organized by the BRACU Literature Club, the event features workshops on creative writing and publishing. Students can participate in open-mic sessions and book fairs showcasing local publishers. Open to the public, it promotes intellectual exchange and artistic expression. Attendees will engage with Bangladesh’s literary community and explore diverse narratives. Join us for a day of inspiration, where stories come alive in the heart of BRACU’s campus."
+    },
+    {
+      "id": "event008",
+      "name": "BRACU Robotics Challenge 2025",
+      "thumbnail": "https://i.ibb.co/7W2kH5g/robotics-challenge.jpg",
+      "category": "Technology",
+      "date": "2025-12-10",
+      "location": "BRACU Engineering Lab, Dhaka",
+      "entry_fee": 350,
+      "description": "The BRACU Robotics Challenge 2025 is an exciting competition where student teams design and program autonomous robots to complete complex tasks. Organized by the BRACU Engineering Society, the event promotes innovation in robotics and automation. Participants attend workshops on Arduino and sensor integration. Prizes include tech gadgets and internships. Open to students from all departments, it fosters interdisciplinary collaboration. Spectators can explore a tech exhibition featuring student prototypes. Join us to witness creativity and engineering excellence as BRACU students push the boundaries of robotics technology."
+    },
+    {
+      "id": "event009",
+      "name": "Environmental Summit 2025",
+      "thumbnail": "https://i.ibb.co/5kP8nXz/environmental-summit.jpg",
+      "category": "Education",
+      "date": "2026-01-15",
+      "location": "BRACU Seminar Room, Dhaka",
+      "entry_fee": 300,
+      "description": "BRAC University’s Environmental Summit 2025 addresses climate change and sustainable development. Experts and students will discuss renewable energy, waste management, and conservation strategies for Bangladesh. The summit includes workshops on eco-friendly practices and a student-led poster competition on environmental solutions. Organized by the BRACU Environmental Club, it’s open to all, promoting awareness and action. Attendees will network with NGOs and policymakers to drive impactful change. Join us to learn, collaborate, and contribute to a greener future through innovative ideas and community engagement at BRACU."
+    },
+    {
+      "id": "event010",
+      "name": "BRACU Debate Championship 2025",
+      "thumbnail": "https://i.ibb.co/9vK3pL2/debate-championship.jpg",
+      "category": "Education",
+      "date": "2026-02-20",
+      "location": "BRACU Lecture Theatre, Dhaka",
+      "entry_fee": 200,
+      "description": "The BRACU Debate Championship 2025 brings together eloquent speakers from universities nationwide to compete in parliamentary and extempore formats. Organized by the BRACU Debate Club, the event sharpens critical thinking and public speaking skills. Participants attend workshops on argumentation and rhetoric. Open to students, it fosters intellectual discourse on global and local issues. Spectators can enjoy thought-provoking debates and engage in Q&A sessions. Winners receive trophies and scholarships. Join us for a dynamic exchange of ideas and witness the power of words at BRAC University."
+    },
+    {
+      "id": "event011",
+      "name": "Art & Photography Exhibition 2025",
+      "thumbnail": "https://i.ibb.co/6PqT2rF/art-exhibition.jpg",
+      "category": "Cultural",
+      "date": "2026-03-05",
+      "location": "BRACU Art Gallery, Dhaka",
+      "entry_fee": 100,
+      "description": "The Art & Photography Exhibition 2025 at BRAC University showcases student creativity through paintings, sculptures, and photographs. Organized by the BRACU Art Club, the event features themes of identity, culture, and environment. Attendees can participate in live art demonstrations and photography workshops. Open to the public, it provides a platform for emerging artists to gain exposure. Visitors can purchase student artworks, with proceeds supporting campus initiatives. Join us to explore vibrant expressions of talent and engage with BRACU’s artistic community in a inspiring gallery setting."
+    },
+    {
+      "id": "event012",
+      "name": "BRACU Business Case Competition 2025",
+      "thumbnail": "https://i.ibb.co/1rN6kQz/business-case.jpg",
+      "category": "Education",
+      "date": "2026-04-12",
+      "location": "BRACU Business School, Dhaka",
+      "entry_fee": 400,
+      "description": "The BRACU Business Case Competition 2025 challenges students to solve real-world business problems through strategic analysis. Teams from top universities will present solutions to industry judges from leading firms. Organized by the BRACU Business Club, the event includes workshops on market research and presentation skills. Open to business and non-business majors, it fosters critical thinking and collaboration. Winners receive internships and cash prizes. Spectators can attend a career fair featuring corporate sponsors. Join us to witness innovative strategies and network with professionals at BRAC University."
+    }
+  ]

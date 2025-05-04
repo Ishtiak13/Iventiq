@@ -1,0 +1,42 @@
+[
+    {
+      "id": "slide1",
+      "slideNumber": 1,
+      "leftSlide": "slide3",
+      "rightSlide": "slide2",
+      "tag": "New event",
+      "title": "Innovate '25",
+      "subtitle": "Everything starts with an idea.",
+      "description": "Join the largest tech & startup fair at BRAC University. Explore student innovations, attend workshops, and meet founders!",
+      "location": "Auditorium",
+      "date": "May 20–21, 2025",
+      "image": "https://i.postimg.cc/xdktdYMR/image.png"
+    },
+    {
+      "id": "slide2",
+      "slideNumber": 2,
+      "leftSlide": "slide1",
+      "rightSlide": "slide3",
+      "tag": "Featured",
+      "title": "Cultureverse",
+      "subtitle": "Celebrate creativity across campus.",
+      "description": "A vibrant showcase of music, dance, and art. Open mic, live painting, and cross-club performances await.",
+      "location": "Open Theatre",
+      "date": "June 3, 2025",
+      "image": "https://i.postimg.cc/N07Lm26f/image.png"
+    },
+    {
+      "id": "slide3",
+      "slideNumber": 3,
+      "leftSlide": "slide2",
+      "rightSlide": "slide1",
+      "tag": "Hot now",
+      "title": "Campus Clash",
+      "subtitle": "One spirit. One trophy.",
+      "description": "Battle it out in inter-department tournaments—football, basketball, and e-sports. Cheer or compete!",
+      "location": "Sports Complex",
+      "date": "May 15–25, 2025",
+      "image": "https://i.postimg.cc/9MQX98XJ/image.png"
+    }
+  ]
+  

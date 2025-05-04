@@ -1,2 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #cd603e;
+  --color-secondary: #8b4a2f;
+  --color-base-200: #faf9f5;
+  --color-base-300: #e8e6dc;
+  --color-accent: #3d3d3a;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  color: #e8e6dc;
+}
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+  color: #cd603e;
+}
+a.active{
+  @apply bg-primary text-base-200
+}
