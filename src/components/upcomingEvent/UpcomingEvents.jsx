@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import EventCard from "../ui/EventCard";
 
 const UpcomingEvents = () => {
@@ -14,7 +14,9 @@ const UpcomingEvents = () => {
 <p className="my-4 text-center text-accent">
 Stay ahead with the latest events happening across BRAC University. <br />From tech talks to cultural fests, there's always something exciting on the way!
 </p>
-{events.map(event => <EventCard key={event.id} event={event}></EventCard>)}
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-12">
+{events.map(event => <EventCard  key={event.id} event={event}></EventCard>)}
+</div>
   </div>;
 };
 

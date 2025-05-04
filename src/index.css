@@ -26,3 +26,7 @@ h2 {
 a.active{
   @apply bg-primary text-base-200
 }
+
+.card-body{
+  flex: 1 1;
+}
