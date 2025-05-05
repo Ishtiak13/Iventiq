@@ -8,6 +8,7 @@ import Clubs from "../../components/clubs/Clubs";
 const Home = () => {
   return (
     <div >
+      <title>Iventiq | Home</title>
       <Suspense fallback={<Loading></Loading>}>
         <Hero />
       </Suspense>

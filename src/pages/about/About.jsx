@@ -3,6 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <section className="max-w-7xl mx-auto text-accent space-y-4 p-4">
+        <title>About</title>
       <h1 className="text-3xl">Welcome to <strong>Iventiq!</strong></h1>
       <p>
         Iventiq is your go-to platform for exploring, managing, and creating all

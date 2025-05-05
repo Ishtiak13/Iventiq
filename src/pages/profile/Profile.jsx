@@ -33,6 +33,7 @@ const Profile = () => {
   };
   return (
     <>
+    <title>My Profile</title>
       <div className="flex flex-col justify-center  place-self-center max-w-7xl w-full p-6 shadow-md rounded-xl sm:px-12 bg-base-200 my-8">
         <img
           src={user.photoURL}

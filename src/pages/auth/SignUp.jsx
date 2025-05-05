@@ -56,6 +56,7 @@ const SignUp = () => {
 
   return (
     <div className="sm:my-10 my-4   p-2">
+      <title>Sign Up</title>
       <div className="w-full max-w-xl xl:px-8 xl:w-5/12 mx-auto ">
         <div className="bg-base-200 shadow-xl rounded-2xl p-7 sm:p-10 text-accent">
           <h3 className="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">

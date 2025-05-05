@@ -4,12 +4,12 @@ import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC3GZBzwRBPMHqCXSwkIkYoroHyRtgnchI",
-  authDomain: "inventiq-47fe7.firebaseapp.com",
-  projectId: "inventiq-47fe7",
-  storageBucket: "inventiq-47fe7.firebasestorage.app",
-  messagingSenderId: "55334615495",
-  appId: "1:55334615495:web:38934e568c2c061f3f41e2",
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 const app = initializeApp(firebaseConfig);

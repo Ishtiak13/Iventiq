@@ -22,6 +22,7 @@ const EventDetails = () => {
 
   return (
     <>
+    <title>{activeEvent.name}</title>
       <div className="w-11/12 mx-auto max-w-7xl card lg:card-side bg-base-200 shadow-sm text-accent my-10">
         <figure className="lg:w-1/2">
           <img

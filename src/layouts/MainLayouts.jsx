@@ -7,6 +7,7 @@ import Footer from "../components/footer/Footer";
 const MainLayouts = () => {
   return (
     <div>
+      <title>Iventiq</title>
       <header className="w-11/12 mx-auto">
         <Navbar />
       </header>
