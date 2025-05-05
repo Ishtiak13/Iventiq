@@ -3,6 +3,7 @@ import { BiCalendarEvent } from "react-icons/bi";
 import { GrMapLocation } from "react-icons/gr";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { useLoaderData, useParams } from "react-router";
+import NoDataFound from "../../pages/error/NoDataFound";
 
 const EventDetails = () => {
   const [reserved, setReserved] = useState(false);
@@ -10,6 +11,9 @@ const EventDetails = () => {
   const data = useLoaderData();
   const { eventId } = useParams();
   const activeEvent = data.find((event) => event.id == eventId);
+  if (!activeEvent){
+    return <NoDataFound></NoDataFound>
+  }
 
   const handleReserve = (e) => {
     e.preventDefault();

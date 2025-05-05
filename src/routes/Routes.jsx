@@ -9,6 +9,7 @@ import Loading from "../components/ui/Loading";
 import ProtectedRoute from "./ProtectedRoute";
 import Profile from "../pages/profile/Profile";
 import CreateEvent from "../pages/createEvent/CreateEvent";
+import About from "../pages/about/About";
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +45,8 @@ export const router = createBrowserRouter([
             <CreateEvent/>
           </ProtectedRoute>)
       }
+      ,
+      { path: "/about", Component: About }
     ],
   },
 ]);
