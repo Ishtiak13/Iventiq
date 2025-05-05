@@ -1,0 +1,62 @@
+[
+  {
+    "id": "club001",
+    "name": "Adventure Club (BUAC)",
+    "logo": "https://i.postimg.cc/XYNb5g51/image.png",
+    "link": "https://www.facebook.com/buacofficial/"
+  },
+  {
+    "id": "club002",
+    "name": "Art & Photography Society (BUAPS)",
+    "logo": "https://i.postimg.cc/rsTbk8CZ/image.png",
+    "link": "https://www.facebook.com/BRACUAPS/"
+  },
+  {
+    "id": "club003",
+    "name": "Cultural Club (BUCuC)",
+    "logo": "https://i.postimg.cc/gj5Zh0SN/image.png",
+    "link": "https://www.facebook.com/bucuc/"
+  },
+  {
+    "id": "club004",
+    "name": "Entrepreneurship Forum (BUEDF)",
+    "logo": "https://i.postimg.cc/9FZd9d29/image.png",
+    "link": "https://www.facebook.com/BRACU.EDF/"
+  },
+  {
+    "id": "club005",
+    "name": "Leadership Development Forum (BULDF)",
+    "logo": "https://i.postimg.cc/brbtQh7P/image.png",
+    "link": "https://www.facebook.com/bracu.ldf/"
+  },
+  {
+    "id": "club006",
+    "name": "Computer Club (BUCC)",
+    "logo": "https://i.postimg.cc/52xm7Xbw/image.png",
+    "link": "https://www.facebook.com/BRACUCC"
+  },
+  {
+    "id": "club007",
+    "name": "Business Club (BIZBEE)",
+    "logo": "https://i.postimg.cc/Kzg7kLDy/image.png",
+    "link": "https://www.facebook.com/bizbee.club"
+  },
+  {
+    "id": "club008",
+    "name": "Football Club (FCBU)",
+    "logo": "https://i.postimg.cc/brxQLh5C/image.png",
+    "link": "https://www.facebook.com/official.fcbu11/"
+  },
+  {
+    "id": "club009",
+    "name": "Robotics Club (ROBU)",
+    "logo": "https://i.postimg.cc/qRfhFFy9/image.png",
+    "link": "https://www.facebook.com/BRACU.Robotics.Club"
+  },
+  {
+    "id": "club010",
+    "name": "Debate Club (BUDC)",
+    "logo": "https://i.postimg.cc/qBYjjJ5R/image.png",
+    "link": "https://www.facebook.com/BUDC.Offical"
+  }
+]

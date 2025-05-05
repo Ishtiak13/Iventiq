@@ -59,7 +59,7 @@ const SlidesCard = ({ slideData }) => {
               </button>
             </div>
             <div className="flex items-center gap-4">
-              <Link className="btn bg-base-300 border-none">Learn more</Link>
+              <a href="#upcoming" className="btn bg-base-300 border-none">Learn more</a>
             </div>
           </div>
         </div>

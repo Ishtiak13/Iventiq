@@ -14,6 +14,9 @@
   --color-base-300: #e8e6dc;
   --color-accent: #3d3d3a;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Roboto", sans-serif;
   color: #e8e6dc;
@@ -23,10 +26,10 @@ h2 {
   font-family: "Playfair Display", serif;
   color: #cd603e;
 }
-a.active{
-  @apply bg-primary text-base-200
+a.active {
+  @apply bg-primary text-base-200;
 }
 
-.card-body{
+.card-body {
   flex: 1 1;
 }

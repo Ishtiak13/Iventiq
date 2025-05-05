@@ -61,7 +61,7 @@ const Navbar = () => {
             <FaUserCircle className=" w-full h-full" />
           </div>
         </div>
-        <Link className="btn btn-primary text-base-200">Sign In</Link>
+        <Link to={'/sign-in'} className="btn btn-primary text-base-200">Sign In</Link>
       </div>
     </nav>
   );

@@ -3,10 +3,11 @@ import Hero from "../../components/header/Hero";
 import Loading from "../../components/ui/Loading";
 import UpcomingEvents from "../../components/upcomingEvent/UpcomingEvents";
 import Status from "../../components/header/Status";
+import Clubs from "../../components/clubs/Clubs";
 
 const Home = () => {
   return (
-    <div className="w-11/12 mx-auto">
+    <div >
       <Suspense fallback={<Loading></Loading>}>
         <Hero />
       </Suspense>
@@ -15,9 +16,15 @@ const Home = () => {
           <UpcomingEvents />
         </Suspense>
       </section>
-      <section>
-        <Status/> 
+      <section >
+        <Suspense fallback={<Loading></Loading>}>
+          <Clubs />
+        </Suspense>
+      </section> 
+      <section className="w-11/12 mx-auto">
+        <Status />
       </section>
+      
     </div>
   );
 };
