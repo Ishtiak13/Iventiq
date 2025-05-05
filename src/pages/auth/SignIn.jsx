@@ -1,8 +1,12 @@
-import React from "react";
+import React, { use } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const SignIn = () => {
+const {email} = use(AuthContext)
+// console.log(email)
+
   return (
     <div className="sm:my-36 my-16   p-2">
       <div className="w-full max-w-xl xl:px-8 xl:w-5/12 mx-auto">
