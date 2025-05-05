@@ -7,6 +7,8 @@ import SignUp from "../pages/auth/SignUp";
 import EventDetails from "../components/eventDetails/EventDetails";
 import Loading from "../components/ui/Loading";
 import ProtectedRoute from "./ProtectedRoute";
+import Profile from "../pages/profile/Profile";
+import CreateEvent from "../pages/createEvent/CreateEvent";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +29,21 @@ export const router = createBrowserRouter([
         loader: () => fetch("/events.json"),
         hydrateFallbackElement: <Loading />,
       },
+      {
+        path: "/my-profile",
+        element: (
+          <ProtectedRoute>
+            <Profile/>
+          </ProtectedRoute>
+        )
+      },
+      {
+        path:'/create-event',
+        element: (
+          <ProtectedRoute>
+            <CreateEvent/>
+          </ProtectedRoute>)
+      }
     ],
   },
 ]);

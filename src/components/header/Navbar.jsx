@@ -25,11 +25,11 @@ const Navbar = () => {
       </li>
       {user && (
         <li>
-          <NavLink to={"/about"}>About</NavLink>
+          <NavLink to={"/create-event"}>Create Event</NavLink>
         </li>
       )}
       <li>
-        <NavLink to={"/contact"}>Contact</NavLink>
+        <NavLink to={"/about"}>About</NavLink>
       </li>
     </>
   );
@@ -61,9 +61,9 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <a href="#">
+        <Link to={'/'}>
           <img className="h-10" src={logo} alt="iventiq logo" />
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-2">{navLinks}</ul>
@@ -72,7 +72,7 @@ const Navbar = () => {
         <div className="avatar relative group">
           <div className="ring-primary ring-offset-base-100 w-7 rounded-full ring-2 ring-offset-2 ">
             {user?.photoURL ? (
-              <img className="object-cover" src={user.photoURL} />
+              <Link to={'/my-profile'} ><img className="object-cover" src={user.photoURL} /></Link>
             ) : (
               <FaUserCircle className=" w-full h-full" />
             )}

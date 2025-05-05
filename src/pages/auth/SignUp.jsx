@@ -4,21 +4,49 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const SignUp = () => {
-  const { signUpWithEmail } = use(AuthContext);
+  const { signUpWithEmail, setUser, updateInfo,signWithGoogle } = use(AuthContext);
   const navigate = useNavigate();
-  const location = useLocation()
-  console.log(location)
+  const location = useLocation();
+  console.log(location);
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = e.target;
-    // const name = form.name.value;
-    // const photoURL = form.photoURL.value;
+    const displayName = form.name.value;
+    const photoURL = form.photoURL.value;
     const email = form.email.value;
     const password = form.password.value;
     signUpWithEmail(email, password)
       .then((res) => {
-        
-        navigate(location.state? `${location.state}`:'/');
+        updateInfo({
+          displayName: displayName,
+          photoURL: displayName,
+        })
+          .then(() => {
+            setUser({
+              ...res.user,
+              displayName: displayName,
+              photoURL: photoURL,
+            });
+          })
+          .catch((error) => {
+            console.log(error);
+            setUser(res.user);
+          });
+        navigate(location.state ? `${location.state}` : "/");
+        console.log(res);
+      })
+      .catch((error) => {
+        console.log(error.code);
+      });
+  };
+  const handleGoogleSignIn = () => {
+    signWithGoogle()
+      .then((res) => {
+        if (location.state) {
+          navigate(location.state);
+          return;
+        }
+        navigate("/");
         console.log(res);
       })
       .catch((error) => {
@@ -107,7 +135,7 @@ const SignUp = () => {
             <div className="px-3 text-xs text-gray-500 sm:text-sm">or</div>
             <hr className="flex-1 border-gray-300" />
           </div>
-          <button className="btn bg-white text-accent w-full border-[#e5e5e5] mb-4">
+          <button onClick={handleGoogleSignIn} className="btn bg-white text-accent w-full border-[#e5e5e5] mb-4">
             <FcGoogle size={18} />
             Sign Up with Google
           </button>

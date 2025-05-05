@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const SignIn = () => {
-  const { user, signWithGoogle, signInWithEmail } = use(AuthContext);
+  const { signWithGoogle, signInWithEmail } = use(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -41,7 +41,6 @@ const SignIn = () => {
         console.log(error.code);
       });
   };
-  console.log(user);
   return (
     <div className="sm:my-36 my-16   p-2">
       <div className="w-full max-w-xl xl:px-8 xl:w-5/12 mx-auto">
