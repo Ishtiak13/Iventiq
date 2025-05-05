@@ -1,12 +1,47 @@
 import React, { use } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const SignIn = () => {
-const {email} = use(AuthContext)
-// console.log(email)
+  const { user, signWithGoogle, signInWithEmail } = use(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
 
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    signInWithEmail(email, password)
+      .then((res) => {
+        if (location.state) {
+          navigate(location.state);
+          return;
+        }
+        navigate("/");
+        console.log(res);
+      })
+      .catch((error) => {
+        console.log(error.code);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    signWithGoogle()
+      .then((res) => {
+        if (location.state) {
+          navigate(location.state);
+          return;
+        }
+        navigate("/");
+        console.log(res);
+      })
+      .catch((error) => {
+        console.log(error.code);
+      });
+  };
+  console.log(user);
   return (
     <div className="sm:my-36 my-16   p-2">
       <div className="w-full max-w-xl xl:px-8 xl:w-5/12 mx-auto">
@@ -14,7 +49,7 @@ const {email} = use(AuthContext)
           <h3 className="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
             Sign In
           </h3>
-          <form>
+          <form onSubmit={handleSignIn}>
             <div className="mb-1 sm:mb-2">
               <label htmlFor="email" className="inline-block mb-1 font-medium">
                 E-mail
@@ -52,22 +87,29 @@ const {email} = use(AuthContext)
                 Sign In
               </button>
             </div>
-            <div className="flex items-center w-full mb-5">
-              <hr className="flex-1 border-gray-300" />
-              <div className="px-3 text-xs text-gray-500 sm:text-sm">or</div>
-              <hr className="flex-1 border-gray-300" />
-            </div>
-            <button className="btn bg-white text-accent w-full border-[#e5e5e5] mb-4">
-            <FcGoogle size={18} />
-              Sign In with Google
-            </button>
-            <p className="text-xs text-gray-600 sm:text-sm">
-              Don't have an account?{" "}
-              <Link to={"/sign-up"} className="text-blue-500">
-                Sign up now
-              </Link>
-            </p>
           </form>
+          <div className="flex items-center w-full mb-5">
+            <hr className="flex-1 border-gray-300" />
+            <div className="px-3 text-xs text-gray-500 sm:text-sm">or</div>
+            <hr className="flex-1 border-gray-300" />
+          </div>
+          <button
+            onClick={handleGoogleSignIn}
+            className="btn bg-white text-accent w-full border-[#e5e5e5] mb-4"
+          >
+            <FcGoogle size={18} />
+            Sign In with Google
+          </button>
+          <p className="text-xs text-gray-600 sm:text-sm">
+            Don't have an account?{" "}
+            <Link
+              state={location.state}
+              to={"/sign-up"}
+              className="text-blue-500"
+            >
+              Sign up now
+            </Link>
+          </p>
         </div>
       </div>
     </div>

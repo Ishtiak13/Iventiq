@@ -1,6 +1,5 @@
 import React from "react";
 import { BiCalendarEvent } from "react-icons/bi";
-import { FaMapLocation } from "react-icons/fa6";
 import { GrMapLocation } from "react-icons/gr";
 
 import { Link } from "react-router";

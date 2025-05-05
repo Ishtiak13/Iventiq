@@ -4,6 +4,9 @@ import EventCard from "../ui/EventCard";
 const UpcomingEvents = () => {
   const [events, setEvents] = useState([]);
   const [view, setView] = useState(false);
+
+
+
   useEffect(() => {
     fetch("/events.json")
       .then((res) => res.json())
