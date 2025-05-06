@@ -8,7 +8,7 @@ Iventiq is a university event explorer platform designed to help students discov
 
 ## Live URL
 
-[Insert Live URL here]
+https://iventiq.netlify.app
 
 ## Key Features
 
