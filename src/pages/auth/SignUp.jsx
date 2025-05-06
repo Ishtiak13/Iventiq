@@ -1,20 +1,51 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../providers/AuthProvider";
+import { capitalizeWords } from "../../utils/capitalize";
 
 const SignUp = () => {
-  const { signUpWithEmail, setUser, updateInfo,signWithGoogle } = use(AuthContext);
+  const { signUpWithEmail, setUser, updateInfo, signWithGoogle } =
+    use(AuthContext);
+  const [passValid, setPassValid] = useState("");
+  const [error, setError] = useState("");
+
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = e.target;
-    const displayName = form.name.value;
+    const name = form.name.value;
+    const displayName = capitalizeWords(name);
     const photoURL = form.photoURL.value;
     const email = form.email.value;
     const password = form.password.value;
+
+    let valid = true;
+
+    if (!/.{8,}/.test(password)) {
+      setPassValid("Password must be at least 8 characters long");
+      valid = false;
+    } else if (!/(?=.*[a-z])/.test(password)) {
+      setPassValid("Password must contain at least one lowercase letter");
+      valid = false;
+    } else if (!/(?=.*[A-Z])/.test(password)) {
+      setPassValid("Password must contain at least one uppercase letter");
+      valid = false;
+    } else if (!/(?=.*\d)/.test(password)) {
+      setPassValid("Password must contain at least one digit");
+      valid = false;
+    } else if (!/(?=.*[!@#$%^&*])/.test(password)) {
+      setPassValid("Password must contain at least one special character");
+      valid = false;
+    } else {
+      setPassValid("");
+    }
+
+    if (!valid) {
+      return;
+    }
+
     signUpWithEmail(email, password)
       .then((res) => {
         updateInfo({
@@ -33,10 +64,11 @@ const SignUp = () => {
             setUser(res.user);
           });
         navigate(location.state ? `${location.state}` : "/");
-        console.log(res);
       })
       .catch((error) => {
-        console.log(error.code);
+        const e = String(error.code.split("/")[1].split("-").join(" "));
+        console.log(e);
+        setError(e[0].toUpperCase() + e.slice(1) + ".");
       });
   };
   const handleGoogleSignIn = () => {
@@ -47,7 +79,6 @@ const SignUp = () => {
           return;
         }
         navigate("/");
-        console.log(res);
       })
       .catch((error) => {
         console.log(error.code);
@@ -105,7 +136,9 @@ const SignUp = () => {
                 id="email"
                 name="email"
               />
+              {error && <p className="text-sm text-red-500">{error}</p>}
             </div>
+
             <div className="mb-1 sm:mb-2">
               <label
                 htmlFor="password"
@@ -121,6 +154,7 @@ const SignUp = () => {
                 id="password"
                 name="password"
               />
+              {passValid && <p className="text-sm text-red-500">{passValid}</p>}
             </div>
             <div className="mt-4 mb-2 sm:mb-4">
               <button
@@ -136,7 +170,10 @@ const SignUp = () => {
             <div className="px-3 text-xs text-gray-500 sm:text-sm">or</div>
             <hr className="flex-1 border-gray-300" />
           </div>
-          <button onClick={handleGoogleSignIn} className="btn bg-white text-accent w-full border-[#e5e5e5] mb-4">
+          <button
+            onClick={handleGoogleSignIn}
+            className="btn bg-white text-accent w-full border-[#e5e5e5] mb-4"
+          >
             <FcGoogle size={18} />
             Sign Up with Google
           </button>

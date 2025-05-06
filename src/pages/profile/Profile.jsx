@@ -1,8 +1,10 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Link } from "react-router";
 
 const Profile = () => {
-  const { user, updateInfo } = use(AuthContext);
+  const [sendVerification, setSendVerification] = useState(false);
+  const { user, updateInfo, emailVerify } = use(AuthContext);
 
   const updateName = (e) => {
     // e.preventDefault();
@@ -16,6 +18,13 @@ const Profile = () => {
       .catch((error) => {
         console.log(error);
       });
+  };
+  const handleVerification = () => {
+    emailVerify().then(() => {
+      setSendVerification(true);
+      console.log(" Email verification sent!");
+      // ...
+    });
   };
 
   const updatePhoto = (e) => {
@@ -33,7 +42,7 @@ const Profile = () => {
   };
   return (
     <>
-    <title>My Profile</title>
+      <title>My Profile</title>
       <div className="flex flex-col justify-center  place-self-center max-w-7xl w-full p-6 shadow-md rounded-xl sm:px-12 bg-base-200 my-8">
         <img
           src={user.photoURL}
@@ -45,7 +54,29 @@ const Profile = () => {
             <h2 className="text-xl font-semibold sm:text-2xl">
               {user.displayName}
             </h2>
-            <p className="px-5 text-accent">{user.email}</p>
+            <p className="px-5 text-accent">
+              {user.email}{" "}
+              {user.emailVerified ? (
+                <div className="badge badge-success badge-sm">Verified</div>
+              ) : (
+                <div className="badge badge-error">Not Verified</div>
+              )}{" "}
+            </p>
+            {!user.emailVerified ? (
+              !sendVerification ? (
+                <button
+                  onClick={handleVerification}
+                  className="hover:underline text-accent italic cursor-pointer"
+                >
+                  Verify your email now!
+                </button>
+              ) : (
+                <p className="text-accent badge badge-success">
+                  An email verification mail has been sent, check your inbox!
+                </p>
+              )
+            ) : null}
+
             <hr />
             <p className="px-5 text-accent">
               Account Created: {user.metadata.creationTime}

@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -7,6 +7,7 @@ const SignIn = () => {
   const { signWithGoogle, signInWithEmail } = use(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
+  const [error, setError] = useState("");
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -20,10 +21,10 @@ const SignIn = () => {
           return;
         }
         navigate("/");
-        console.log(res);
       })
       .catch((error) => {
-        console.log(error.code);
+        
+        setError(error.code);
       });
   };
 
@@ -35,12 +36,13 @@ const SignIn = () => {
           return;
         }
         navigate("/");
-        console.log(res);
       })
       .catch((error) => {
         console.log(error.code);
       });
   };
+
+  
   return (
     <div className="sm:my-36 my-16   p-2">
       <title>Sign In</title>
@@ -62,6 +64,7 @@ const SignIn = () => {
                 id="email"
                 name="email"
               />
+              
             </div>
             <div className="mb-1 sm:mb-2">
               <label
@@ -78,7 +81,9 @@ const SignIn = () => {
                 id="password"
                 name="password"
               />
+              <Link to={'/auth/forget-password'} className="hover:underline cursor-pointer text-sm place-self-end">Forgot password?</Link>
             </div>
+            {error && <p className="text-sm text-red-500">Invalid Email or Password</p>}
             <div className="mt-4 mb-2 sm:mb-4">
               <button
                 type="submit"

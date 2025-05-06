@@ -96,11 +96,11 @@ const EventDetails = () => {
         </div>
       ) : (
         <div className="my-16 space-y-4 max-w-2xl mx-auto bg-base-200  p-12 shadow-xl">
-          <div className="badge badge-success py-6 w-full">
-            <IoCheckmarkCircleOutline size={32} />
-            Success! You're in! <br /> We've reserved your seat — yay! Get ready
+          <p className="bg-green-400 text-accent font-semibold rounded-2xl p-3 flex items-center gap-3">
+          <IoCheckmarkCircleOutline size={50} className=" border-r-2 border-black/50 pr-3" />
+                     Success! You're in! <br /> We've reserved your seat — yay! Get ready
             to enjoy the event.
-          </div>
+                   </p>
           <button onClick={()=>setReserved(false)} className="btn btn-primary text-white w-full">
             One More? Let's Go!
           </button>

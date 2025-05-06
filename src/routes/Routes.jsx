@@ -10,6 +10,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import Profile from "../pages/profile/Profile";
 import CreateEvent from "../pages/createEvent/CreateEvent";
 import About from "../pages/about/About";
+import ForgetPass from "../pages/auth/ForgetPass";
 
 export const router = createBrowserRouter([
   {
@@ -46,7 +47,11 @@ export const router = createBrowserRouter([
           </ProtectedRoute>)
       }
       ,
-      { path: "/about", Component: About }
+      { path: "/about", Component: About },
+      {
+        path:'/auth/forget-password',
+        Component:ForgetPass
+      }
     ],
   },
 ]);
