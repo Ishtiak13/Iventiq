@@ -1,6 +1,6 @@
 import React, { use, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
-import { Link } from "react-router";
+import { capitalizeWords } from "../../utils/capitalize";
 
 const Profile = () => {
   const [sendVerification, setSendVerification] = useState(false);
@@ -8,7 +8,8 @@ const Profile = () => {
 
   const updateName = (e) => {
     // e.preventDefault();
-    const displayName = e.target.name.value;
+    const name = e.target.name.value;
+    const displayName = capitalizeWords(name);
 
     updateInfo({
       displayName,
